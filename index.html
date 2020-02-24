@@ -35,6 +35,8 @@
         bottom: 0;
       }      
       
+      h1 { font-size: 2rem; }
+      
       /* Helper classes */
       .u-hide { display: none; }
 
@@ -60,7 +62,7 @@
       /* ANY OTHER STYLES THAT NEED MUSTACHE.JS CAPABILITIES */
     </style>
   </head>
-  <body style="background: white" data-crop="{{show-crop}}">
+  <body style="background: white" data-crop="{{show-crop}}" data-reduce-export-font-size-by-percent="0" data-reduce-firefox-font-size-by-percent="0">
     <div class="placeholderMaster" data-opacity="{{ placeholder-opacity }}">
       <div class="placeholderMaster__item" data-bg="{{ placeholder-image-1 }}"></div>
     </div><!-- end placeholderMaster -->
@@ -69,6 +71,7 @@
       <div class="bleed">
 
         <div class="container fit">
+          <h1>Test Heading</h1>
         </div><!--container fit-->
 
       </div><!--bleed-->
@@ -97,7 +100,7 @@
     </script>
     <script>
       
-      console.clear();
+//      console.clear();
 
       // Tracking text changes and firing text restriction functions (mutationObserver)
       const overflowObserver = new MutationObserver(function(mutations) {
